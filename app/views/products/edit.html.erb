@@ -1,0 +1,31 @@
+<h1>Editing Product #<%= @product.id %></h1>
+
+
+<%= form_tag(product_url(@product), method: 'put') do %>
+
+  <div>
+    <%= label_tag :model_id %><br />
+    <%= number_field_tag :model_id, @product.model_id %>
+  </div>
+
+  <div>
+    <%= label_tag :photo_url %><br />
+    <%= text_field_tag :photo_url, @product.photo_url %>
+  </div>
+
+  <div>
+    <%= label_tag :description %><br />
+    <%= text_area_tag :description, @product.description %>
+  </div>
+
+  <div>
+    <%= label_tag :category_id %><br />
+    <%= number_field_tag :category_id, @product.category_id %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Product" %>
+  </div>
+
+<% end %>

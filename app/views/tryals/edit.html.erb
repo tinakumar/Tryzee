@@ -1,0 +1,41 @@
+<h1>Editing Tryal #<%= @tryal.id %></h1>
+
+
+<%= form_tag(tryal_url(@tryal), method: 'put') do %>
+
+  <div>
+    <%= label_tag :status %><br />
+    <%= text_field_tag :status, @tryal.status %>
+  </div>
+
+  <div>
+    <%= label_tag :user_id %><br />
+    <%= number_field_tag :user_id, @tryal.user_id %>
+  </div>
+
+  <div>
+    <%= label_tag :lender_id %><br />
+    <%= number_field_tag :lender_id, @tryal.lender_id %>
+  </div>
+
+  <div>
+    <%= label_tag :product_id %><br />
+    <%= number_field_tag :product_id, @tryal.product_id %>
+  </div>
+
+  <div>
+    <%= label_tag :start_at %><br />
+    <%= datetime_select_tag :start_at, @tryal.start_at %>
+  </div>
+
+  <div>
+    <%= label_tag :due_at %><br />
+    <%= datetime_select_tag :due_at, @tryal.due_at %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Tryal" %>
+  </div>
+
+<% end %>

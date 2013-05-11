@@ -1,0 +1,26 @@
+<h1>Editing Message #<%= @message.id %></h1>
+
+
+<%= form_tag(message_url(@message), method: 'put') do %>
+
+  <div>
+    <%= label_tag :message %><br />
+    <%= text_area_tag :message, @message.message %>
+  </div>
+
+  <div>
+    <%= label_tag :user_id %><br />
+    <%= number_field_tag :user_id, @message.user_id %>
+  </div>
+
+  <div>
+    <%= label_tag :product_id %><br />
+    <%= number_field_tag :product_id, @message.product_id %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Message" %>
+  </div>
+
+<% end %>

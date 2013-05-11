@@ -1,0 +1,41 @@
+<h1>New Tryal</h1>
+
+
+<%= form_tag(tryals_url, method: 'post') do %>
+
+
+  <div>
+    <%= label_tag :status %><br />
+    <%= text_field_tag :status %>
+  </div>
+
+    <div>
+    <%= label_tag :user_id %><br />
+    <%= number_field_tag :user_id %>
+  </div>
+
+    <div>
+    <%= label_tag :lender_id %><br />
+    <%= number_field_tag :lender_id %>
+  </div>
+
+    <div>
+    <%= label_tag :product_id %><br />
+    <%= number_field_tag :product_id %>
+  </div>
+
+    <div>
+    <%= label_tag :start_at %><br />
+    <%= datetime_select_tag :start_at %>
+  </div>
+
+    <div>
+    <%= label_tag :due_at %><br />
+    <%= datetime_select_tag :due_at %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Create Tryal" %>
+  </div>
+<% end %>

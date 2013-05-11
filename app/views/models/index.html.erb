@@ -1,0 +1,30 @@
+<h1>Models</h1>
+
+<p><%= link_to 'Add a New Model', new_model_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Manufacturer</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @models.each do |model| %>
+    <tr>
+      <td><%= model.name %></td>
+      <td><%= model.manufacturer_id %></td>
+  
+      <td><%= link_to 'Show', model_url(model) %></td>
+      <td><%= link_to 'Edit', edit_model_url(model) %></td>
+      <td><%= link_to 'Destroy', model_url(model), method: 'delete', data: { confirm: "Do you really want to delete this model?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

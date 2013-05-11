@@ -1,0 +1,26 @@
+<h1>Editing Manufacturer #<%= @manufacturer.id %></h1>
+
+
+<%= form_tag(manufacturer_url(@manufacturer), method: 'put') do %>
+
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, @manufacturer.name %>
+  </div>
+
+  <div>
+    <%= label_tag :rebate %><br />
+    <%= check_box_tag :rebate, @manufacturer.rebate? %>
+  </div>
+
+  <div>
+    <%= label_tag :rebate_description %><br />
+    <%= text_field_tag :rebate_description, @manufacturer.rebate_description %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Manufacturer" %>
+  </div>
+
+<% end %>

@@ -1,0 +1,38 @@
+<h1>Tryals</h1>
+
+<p><%= link_to 'Add a New Tryal', new_tryal_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>User</th>
+      <th>Lender</th>
+      <th>Product</th>
+      <th>Start at</th>
+      <th>Due at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @tryals.each do |tryal| %>
+    <tr>
+      <td><%= tryal.status %></td>
+      <td><%= tryal.user_id %></td>
+      <td><%= tryal.lender_id %></td>
+      <td><%= tryal.product_id %></td>
+      <td><%= tryal.start_at %></td>
+      <td><%= tryal.due_at %></td>
+  
+      <td><%= link_to 'Show', tryal_url(tryal) %></td>
+      <td><%= link_to 'Edit', edit_tryal_url(tryal) %></td>
+      <td><%= link_to 'Destroy', tryal_url(tryal), method: 'delete', data: { confirm: "Do you really want to delete this tryal?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

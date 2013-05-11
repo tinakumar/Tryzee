@@ -1,0 +1,21 @@
+<h1>Editing Model #<%= @model.id %></h1>
+
+
+<%= form_tag(model_url(@model), method: 'put') do %>
+
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, @model.name %>
+  </div>
+
+  <div>
+    <%= label_tag :manufacturer_id %><br />
+    <%= number_field_tag :manufacturer_id, @model.manufacturer_id %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Model" %>
+  </div>
+
+<% end %>
