@@ -1,4 +1,20 @@
 Tryzee::Application.routes.draw do
+  root :to => 'pages#home'
+
+  match '/how_it_works', to: 'pages#how_it_works'
+  match '/about', to: 'pages#about'
+  match '/help', to: 'pages#help'
+  match '/start', to: 'pages#start'
+  match '/home', to: 'pages#home'
+
+  #get "pages/about"
+
+  #get "pages/how_it_works"
+
+  #get "pages/help"
+
+  #get "pages/start"
+
   # Routes for the Tryal resource:
   # CREATE
   get '/tryals/new', controller: 'tryals', action: 'new', as: 'new_tryal'
