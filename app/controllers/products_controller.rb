@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
 
+
   def index
     @products = Product.all
   end
@@ -18,7 +19,7 @@ class ProductsController < ApplicationController
     @product.photo_url = params[:photo_url]
     @product.description = params[:description]
     @product.category_id = params[:category_id]
-    
+
     if @product.save
             redirect_to products_url
           else
@@ -36,7 +37,7 @@ class ProductsController < ApplicationController
     @product.photo_url = params[:photo_url]
     @product.description = params[:description]
     @product.category_id = params[:category_id]
-    
+
     if @product.save
             redirect_to products_url
           else

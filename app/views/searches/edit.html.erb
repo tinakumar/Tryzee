@@ -1,0 +1,31 @@
+<h1>Editing Search #<%= @search.id %></h1>
+
+
+<%= form_tag(search_url(@search), method: 'put') do %>
+
+  <div>
+    <%= label_tag :category %><br />
+    <%= text_field_tag :category, @search.category %>
+  </div>
+
+  <div>
+    <%= label_tag :manufacturer_id %><br />
+    <%= number_field_tag :manufacturer_id, @search.manufacturer_id %>
+  </div>
+
+  <div>
+    <%= label_tag :model_id %><br />
+    <%= number_field_tag :model_id, @search.model_id %>
+  </div>
+
+  <div>
+    <%= label_tag :user_id %><br />
+    <%= number_field_tag :user_id, @search.user_id %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Search" %>
+  </div>
+
+<% end %>

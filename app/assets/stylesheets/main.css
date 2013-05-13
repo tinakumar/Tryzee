@@ -1,0 +1,37 @@
+body {
+  width: 90%;
+  margin: 1% auto;
+  text-align: center;
+  font-size: 120%;
+  font-style: arial;
+  background-color: silver;
+  background-image: url(../images/graybackground.jpg);
+}
+
+#nav {
+    margin: 1%;
+    font-family: arial;
+    float: center;
+    font-size: 22px;
+}
+
+#feature {
+  margin: 1%;
+  float: center;
+  font-family: arial;
+  color: white;
+  font-weight: bolder;
+  padding: 10px;
+  background-color: silver;
+  font-size: 40px;
+  }
+
+li {
+  display: inline;
+  padding: 10px;}
+
+#footer {
+    background-color: silver;
+    padding: 1px 0}
+
+

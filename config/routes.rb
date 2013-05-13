@@ -1,4 +1,21 @@
 Tryzee::Application.routes.draw do
+  # Routes for the Search resource:
+  # CREATE
+  get '/searches/new', controller: 'searches', action: 'new', as: 'new_search'
+  post '/searches', controller: 'searches', action: 'create'
+
+  # READ
+  get '/searches', controller: 'searches', action: 'index', as: 'searches'
+  get '/searches/:id', controller: 'searches', action: 'show', as: 'search'
+
+  # UPDATE
+  get '/searches/:id/edit', controller: 'searches', action: 'edit', as: 'edit_search'
+  put '/searches/:id', controller: 'searches', action: 'update'
+
+  # DELETE
+  delete '/searches/:id', controller: 'searches', action: 'destroy'
+  #------------------------------
+
   root :to => 'pages#home'
 
   match '/how_it_works', to: 'pages#how_it_works'
