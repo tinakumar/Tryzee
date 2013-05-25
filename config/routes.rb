@@ -1,4 +1,30 @@
 Tryzee::Application.routes.draw do
+  resources :results
+
+
+  resources :searches
+
+
+  resource :register
+
+  resources :users
+
+
+  #get "register/first_name:string"
+  #get "register/last_name:string"
+  #get "register/photo_url:string"
+  #get "register/location:string"
+  get '/registers/new' => 'registers#new', as: 'new_register'
+  post '/registers' => 'registers#create', as: 'registers'
+  delete '/registers' => 'registers#destroy'
+  #get "sessions/new"
+  #get "sessions/create"
+  #get "sessions/destroy"
+
+  get '/sessions/new' => 'sessions#new', as: 'new_session'
+  post '/sessions' => 'sessions#create', as: 'sessions'
+  match '/signout' => 'sessions#destroy', via: :delete
+
   root :to => 'pages#home'
 
   match '/how_it_works', to: 'pages#how_it_works'
@@ -6,6 +32,8 @@ Tryzee::Application.routes.draw do
   match '/help', to: 'pages#help'
   match '/start', to: 'pages#start'
   match '/home', to: 'pages#home'
+  match '/signin', to: 'pages#signin'
+  match '/welcome', to: 'pages#welcome'
 
   #get "pages/about"
 
@@ -47,23 +75,6 @@ Tryzee::Application.routes.draw do
 
   # DELETE
   delete '/products/:id', controller: 'products', action: 'destroy'
-  #------------------------------
-
-  # Routes for the User resource:
-  # CREATE
-  get '/users/new', controller: 'users', action: 'new', as: 'new_user'
-  post '/users', controller: 'users', action: 'create'
-
-  # READ
-  get '/users', controller: 'users', action: 'index', as: 'users'
-  get '/users/:id', controller: 'users', action: 'show', as: 'user'
-
-  # UPDATE
-  get '/users/:id/edit', controller: 'users', action: 'edit', as: 'edit_user'
-  put '/users/:id', controller: 'users', action: 'update'
-
-  # DELETE
-  delete '/users/:id', controller: 'users', action: 'destroy'
   #------------------------------
 
   # Routes for the Message resource:

@@ -1,0 +1,16 @@
+<h1>Hi <%= current_user.first_name %>! </h1>
+
+
+<%= link_to "Pretty Picture!", " " %>
+<div>
+<%= link_to "Ready to Try?", tryals_url %>
+<div>
+<%= link_to "Change your profile?", edit_user_path(current_user) %>
+<div>
+<%= link_to "Want to Search?", searches_url %>
+<div>
+<%= link_to "Send a message!", messages_url %>
+<div>
+<%= link_to "Review Tryal Activity", tryals_url %>
+</div>
+

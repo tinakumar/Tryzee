@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130511214057) do
+ActiveRecord::Schema.define(:version => 20130525194246) do
 
   create_table "categories", :force => true do |t|
     t.string "name"
@@ -41,6 +41,35 @@ ActiveRecord::Schema.define(:version => 20130511214057) do
     t.integer "category_id"
   end
 
+  create_table "registers", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "photo_url"
+    t.string   "location"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "results", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "location"
+    t.integer  "model_id"
+    t.integer  "manufacturer_id"
+    t.integer  "search_id"
+    t.integer  "category_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "searches", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "location"
+    t.integer  "model_id"
+    t.integer  "manufacturer_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
   create_table "tryals", :force => true do |t|
     t.string   "status"
     t.integer  "user_id"
@@ -58,6 +87,11 @@ ActiveRecord::Schema.define(:version => 20130511214057) do
     t.float  "longitude"
     t.string "first_name"
     t.string "last_name"
+    t.string "address"
+    t.string "address2"
+    t.string "city"
+    t.string "state"
+    t.string "zip_code"
   end
 
 end

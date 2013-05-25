@@ -13,18 +13,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new
-    @user.email = params[:email]
-    @user.password_digest = params[:password_digest]
-    @user.photo_url = params[:photo_url]
-    @user.latitude = params[:latitude]
-    @user.longitude = params[:longitude]
-    @user.first_name = params[:first_name]
-    @user.last_name = params[:last_name]
-    
+    @user = User.new(params[:user])
     if @user.save
-            redirect_to users_url
-          else
+      session[:user_id] = @user.id
+      flash[:notice] = "Welcome to Tryzee"
+      redirect_to edit_user_path(@user)
+      else
       render 'new'
     end
   end
@@ -35,19 +29,12 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by_id(params[:id])
-    @user.email = params[:email]
-    @user.password_digest = params[:password_digest]
-    @user.photo_url = params[:photo_url]
-    @user.latitude = params[:latitude]
-    @user.longitude = params[:longitude]
-    @user.first_name = params[:first_name]
-    @user.last_name = params[:last_name]
-    
-    if @user.save
-            redirect_to users_url
-          else
-      render 'edit'
-    end
+      if @user.update_attributes(params[:user])
+        flash[:notice] = "Thanks! Now let's get you started."
+        redirect_to welcome_path
+      else
+        render 'edit'
+      end
   end
 
   def destroy

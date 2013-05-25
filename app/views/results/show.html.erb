@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @result.user_id %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @result.location %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%= @result.model_id %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @result.manufacturer_id %>
+</p>
+
+<p>
+  <b>Search:</b>
+  <%= @result.search_id %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @result.category_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_result_path(@result) %> |
+<%= link_to 'Back', results_path %>

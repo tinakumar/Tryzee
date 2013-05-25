@@ -1,4 +1,4 @@
-<h1>User #<%= @user.id %></h1>
+<h1>User</h1>
 
 <p>
   <b>Email:</b>
@@ -34,5 +34,7 @@
   <b>Last name:</b>
   <%= @user.last_name %>
 </p>
-
+<br>
+<br>
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=13&markers=#{@user.latitude}%2C#{@user.longitude}" %>
 

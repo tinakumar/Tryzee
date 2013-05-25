@@ -1,0 +1,33 @@
+<h1>Listing results</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Location</th>
+    <th>Model</th>
+    <th>Manufacturer</th>
+    <th>Search</th>
+    <th>Category</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @results.each do |result| %>
+  <tr>
+    <td><%= result.user_id %></td>
+    <td><%= result.location %></td>
+    <td><%= result.model_id %></td>
+    <td><%= result.manufacturer_id %></td>
+    <td><%= result.search_id %></td>
+    <td><%= result.category_id %></td>
+    <td><%= link_to 'Show', result %></td>
+    <td><%= link_to 'Edit', edit_result_path(result) %></td>
+    <td><%= link_to 'Destroy', result, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Result', new_result_path %>

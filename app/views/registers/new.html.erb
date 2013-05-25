@@ -1,0 +1,17 @@
+<h1 style="color:green">Let Us Get to Know You Better</h1>
+
+<%= form_tag registers_url do %>
+  <%= label_tag :first_name %>
+  <%= text_field_tag :first_name %>
+
+  <%= label_tag :last_name %>
+  <%= text_field_tag :last_name %>
+
+  <%= label_tag :Picture %>
+  <%= image_tag :photo_url %>
+
+  <%= label_tag :location %>
+  <%= text_field_tag :location %>
+
+  <%= submit_tag "Register!" %>
+<% end %>

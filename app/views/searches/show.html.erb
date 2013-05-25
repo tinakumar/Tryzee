@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Category:</b>
+  <%= @search.category_id %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @search.location %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%= @search.model_id %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @search.manufacturer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_search_path(@search) %> |
+<%= link_to 'Back', searches_path %>
