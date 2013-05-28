@@ -1,41 +1,39 @@
 <h1>New Tryal</h1>
 
-
-<%= form_tag(tryals_url, method: 'post') do %>
-
+<%= form_for @tryal do |f| %>
 
   <div>
-    <%= label_tag :status %><br />
-    <%= text_field_tag :status %>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
   </div>
 
     <div>
-    <%= label_tag :user_id %><br />
-    <%= number_field_tag :user_id %>
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
   </div>
 
     <div>
-    <%= label_tag :lender_id %><br />
-    <%= number_field_tag :lender_id %>
+    <%= f.label :lender_id %><br />
+    <%= f.number_field :lender_id %>
   </div>
 
     <div>
-    <%= label_tag :product_id %><br />
-    <%= number_field_tag :product_id %>
+    <div class="dropdown">
+    <%= f.label :product_id %><br />
+    <%= f.text_field :product_id %>
   </div>
 
     <div>
-    <%= label_tag :start_at %><br />
-    <%= datetime_select_tag :start_at %>
+    <%= f.label :start_at %><br />
+    <%= f.text_field :start_at %>
   </div>
 
     <div>
-    <%= label_tag :due_at %><br />
-    <%= datetime_select_tag :due_at %>
-  </div>
+    <%= f.label :due_at %><br />
+    <%= f.text_field :due_at %>
+   </div>
 
-  
-  <div>
-    <%= submit_tag "Create Tryal" %>
-  </div>
+    <div>
+    <div class="actions"><%= f.submit "Create Tryal!" %></div>
+    </div>
 <% end %>
