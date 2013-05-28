@@ -1,0 +1,9 @@
+<div class="product">
+  <h2><%= link_to product.description, product %></h2>
+  <div class="details">
+
+    <% if product.category %>
+      | Category: <%= product.category.name %>
+    <% end %>
+  </div>
+</div>

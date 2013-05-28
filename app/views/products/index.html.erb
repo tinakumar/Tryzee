@@ -1,34 +1,19 @@
-<h1>Products</h1>
+<h1>Search Products</h1>
 
-<p><%= link_to 'Add a New Product', new_product_url %></p>
+<%= form_tag products_path, method: :get do %>
+<p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= button_tag "Search", name: nil %>
+</p>
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Model</th>
-      <th>Photo url</th>
-      <th>Description</th>
-      <th>Category</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<p><%= link_to "Advanced Search", new_search_path %>
 
-  <tbody>
-  <% @products.each do |product| %>
-    <tr>
-      <td><%= product.model_id %></td>
-      <td><%= product.photo_url %></td>
-      <td><%= product.description %></td>
-      <td><%= product.category_id %></td>
-  
-      <td><%= link_to 'Show', product_url(product) %></td>
-      <td><%= link_to 'Edit', edit_product_url(product) %></td>
-      <td><%= link_to 'Destroy', product_url(product), method: 'delete', data: { confirm: "Do you really want to delete this product?" } %></td>
+<div id="products">
+  <%= render @products %>
+</div>
 
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+Basically if first time, show, otherwise delete
+
+
 

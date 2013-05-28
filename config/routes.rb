@@ -1,14 +1,12 @@
 Tryzee::Application.routes.draw do
   resources :results
+  resources :searches
+  resources :registers
+  resources :users
 
 
   resources :searches
-
-
-  resource :register
-
-  resources :users
-
+  #root to: 'products#index'
 
   #get "register/first_name:string"
   #get "register/last_name:string"

@@ -26,10 +26,7 @@ class SearchesController < ApplicationController
   def new
     @search = Search.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @search }
-    end
+
   end
 
   # GET /searches/1/edit
@@ -40,18 +37,9 @@ class SearchesController < ApplicationController
   # POST /searches
   # POST /searches.json
   def create
-    @search = Search.new(params[:search])
+    @search = Search.create!(params[:search])
+     redirect_to @search
 
-    respond_to do |format|
-      if @search.save
-        format.html { redirect_to @search, notice: 'Search was successfully created.' }
-        format.json { render json: @search, status: :created, location: @search }
-        redirect_to results_url
-      else
-        format.html { render action: "new" }
-        format.json { render json: @search.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PUT /searches/1

@@ -1,24 +1,6 @@
-<p id="notice"><%= notice %></p>
+<h1>Search Results</h1>
 
-<p>
-  <b>Category:</b>
-  <%= @search.category_id %>
-</p>
-
-<p>
-  <b>Location:</b>
-  <%= @search.location %>
-</p>
-
-<p>
-  <b>Model:</b>
-  <%= @search.model_id %>
-</p>
-
-<p>
-  <b>Manufacturer:</b>
-  <%= @search.manufacturer_id %>
-</p>
+<%= render @search.products %>
 
 
 <%= link_to 'Edit', edit_search_path(@search) %> |
