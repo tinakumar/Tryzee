@@ -1,4 +1,4 @@
-<h1>New Tryal</h1>
+<h1>Tryal Reservation!</h1>
 
 <%= form_for @tryal do |f| %>
 
@@ -30,7 +30,7 @@
 
     <div>
     <%= f.label :due_at %><br />
-    <%= f.text_field :due_at %>
+    <%= f.date_time :due_at %>
    </div>
 
     <div>

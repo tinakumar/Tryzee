@@ -1,4 +1,4 @@
-<h1>New Product</h1>
+<h1>Add a New Product</h1>
 
 
 <%= form_tag(products_url, method: 'post') do %>
@@ -20,11 +20,16 @@
   </div>
 
     <div>
+    <%= label_tag :lenders_description %><br />
+    <%= text_area_tag :lenders_description  %>
+   </div>
+
+    <div>
     <%= label_tag :category_id %><br />
     <%= number_field_tag :category_id %>
   </div>
 
-  
+
   <div>
     <%= submit_tag "Create Product" %>
   </div>

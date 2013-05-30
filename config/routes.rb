@@ -32,6 +32,7 @@ Tryzee::Application.routes.draw do
   match '/home', to: 'pages#home'
   match '/signin', to: 'pages#signin'
   match '/welcome', to: 'pages#welcome'
+  match '/search', to: 'pages#search'
 
   #get "pages/about"
 

@@ -6,8 +6,8 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Model Number</th>
       <th>Manufacturer</th>
-      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -17,14 +17,18 @@
   <% @models.each do |model| %>
     <tr>
       <td><%= model.name %></td>
-      <td><%= model.manufacturer_id %></td>
-  
+      <td><%= model.model_number %></td>
+      <div>
+      <td><%= model.manufacturer %></td>
+    </div>
+
       <td><%= link_to 'Show', model_url(model) %></td>
       <td><%= link_to 'Edit', edit_model_url(model) %></td>
       <td><%= link_to 'Destroy', model_url(model), method: 'delete', data: { confirm: "Do you really want to delete this model?" } %></td>
 
     </tr>
   <% end %>
+
   </tbody>
 </table>
 

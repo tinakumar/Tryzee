@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130527042704) do
+ActiveRecord::Schema.define(:version => 20130530044214) do
 
   create_table "categories", :force => true do |t|
     t.string "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20130527042704) do
     t.string  "name"
     t.boolean "rebate"
     t.string  "rebate_description"
+    t.integer "model_id"
   end
 
   create_table "messages", :force => true do |t|
@@ -32,6 +33,10 @@ ActiveRecord::Schema.define(:version => 20130527042704) do
   create_table "models", :force => true do |t|
     t.string  "name"
     t.integer "manufacturer_id"
+    t.string  "model_number"
+    t.integer "category_id"
+    t.string  "category_name"
+    t.string  "manufacturer_name"
   end
 
   create_table "products", :force => true do |t|
@@ -39,6 +44,11 @@ ActiveRecord::Schema.define(:version => 20130527042704) do
     t.string  "photo_url"
     t.text    "description"
     t.integer "category_id"
+    t.text    "lenders_description"
+    t.integer "manufacturer_id"
+    t.string  "manufacturer_name"
+    t.string  "category_name"
+    t.string  "model_name"
   end
 
   create_table "registers", :force => true do |t|

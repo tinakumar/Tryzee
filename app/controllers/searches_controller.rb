@@ -8,6 +8,8 @@ class SearchesController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @searches }
     end
+
+
   end
 
   # GET /searches/1

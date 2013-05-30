@@ -1,7 +1,17 @@
-<h1>Product #<%= @product.id %></h1>
+<h1>Tryzee Item: <%= @product.model_name %></h1>
 
 <p>
-  <b>Model:</b>
+  <b>Model Name:</b>
+  <%= @product.model_name %>
+</p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @product.manufacturer_name %>
+</p>
+
+<p>
+  <b>Model Number:</b>
   <%= @product.model_id %>
 </p>
 
@@ -17,7 +27,9 @@
 
 <p>
   <b>Category:</b>
-  <%= @product.category_id %>
+  <%= @product.category_name %>
 </p>
+
+<%= link_to "Like what you see? Time to Tryzee!", new_tryal_url %>
 
 
