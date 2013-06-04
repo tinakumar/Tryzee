@@ -1,26 +1,32 @@
-<h1 style="color:blue">Welcome to Tryzee! Join Us!</h1>
 
 
-<%= form_for(@user) do |f| %>
+<section id="main">
+  <h1>Join Us!</h1>
 
-  <div>
-    Email:
-    <%= f.text_field :email %><br />
-  </div>
 
-    <div>
-    Password:
-    <%= f.password_field :password %>
-  </div>
+<div class="sign_up_form">
+    <%= form_for(@user) do |f| %>
 
-  <div>
-    Type it again:
-    <%= f.password_field :password_confirmation %>
-  </div>
+      <div class="field">
+        Email:
+        <%= f.text_field :email %><br>
+      </div>
+  
+      <div class="field">
+        Password:
+        <%= f.password_field :password %><br>
+      </div>
 
-  <div>
-    <%= f.submit "Sign Up!" %>
-  </div>
+      <div class="field">
+        Type it again:
+        <%= f.password_field :password_confirmation %><br>
+      </div>
 
-<% end %>
+      <div class="action">
+        <%= f.submit "Sign Up!" %>
+      </div>
+    <% end %>
+</div>
 
+
+</section>

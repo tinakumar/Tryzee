@@ -1,13 +1,91 @@
-<h1>Yo, what up? You're at Tryzee...</h1>
+<section id="main">
+  <h1>Welcome to Tryzee</h1>
+  <h2>a peer-to-peer rental service where it pays to try before you buy</h2>
 
-<%= link_to "How it Works", how_it_works_url %>
-<%= link_to "Help", help_url %>
-<%= link_to "Start", start_url %>
-<%= link_to "About", about_url %>
-<%= link_to "Sign In", new_session_url%>
-<%= link_to "Sign Up", new_user_path %>
-<%= link_to "Manufacturers", manufacturers_path %>
-<%= link_to "Models", models_path %>
-<%= link_to "Categories", categories_path %>
-<%= link_to "Search!", products_path %>
-<%= link_to "Tryzee!", tryals_path %>
+    <div class="white_rounded">
+    <p>What would you like to try today?</p>
+    <br>
+    <%= form_tag products_path, method: :get do %>
+        <%= text_field_tag :search, params[:search], :size => 60 %>
+        <%= button_tag "Search", name: nil %>
+    <% end %>
+  </div>
+
+  <div class="stroller">
+   <%= image_tag("stroller.png") %>
+ </div>
+
+   <%= image_tag("countertop.png", :width => '100%') %>
+
+   </section>
+
+
+<br>
+<br>
+<br>
+
+
+
+<section id="main">
+  <h1>The scoop on Tryzee</h1>
+  <h2>Learn about the only short term trial service</h2>
+
+    <div id="video">
+      <iframe width="550" seamless="0"  align="centered" height="400" src="http://www.youtube.com/embed/UhbPmJIDs9o" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+
+</section>
+
+
+<br>
+<br>
+<br>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<section id="main">
+  <h1>Who's Tryzee For</h1>
+
+  <p>Want to earn cash on past purchases?</p>
+  <p>It wasn’t that long ago you were actively shopping for a stroller, car seat or bike. Today the only action it gets is being shuffled around in the closet. Find out how your past purchases can collect cash instead of dust. And you can earn rebates on some of your favorite brands on Tryzee.</p>
+  
+      <%= link_to "Click here", how_it_works_url %>
+
+</section>
+
+<section>
+  <h2>Looking to try before you buy?</h2>
+  <p>You’ve done all the research, asked your friends, and visited the store (on more than one occasion). But no matter how many times you “test drive” it in the store, it’s just not the same as taking it for a spin in your own life. Find out how to try it before you buy ¬it on Tryzee and earn Manufacturer rebates toward your future purchase.</p>
+    <div class="abutton">
+      <%= link_to "Click here", how_it_works_url %>
+    </div>
+</section>
+
+<br>
+<br>
+
+<section>
+  <header>Tryzee Partnership Brands</header>
+<p>
+</p>
+<table>
+  <tr>
+    <td><%= link_to "Bugaboo", manufacturers_url %></td>
+    <td><%= link_to "BOB", manufacturers_url %></td>
+    <td><%= link_to "Mutsy", manufacturers_url %></td>
+  </tr>
+  <tr>
+    <td><%= link_to "4Moms", manufacturers_url %></td>
+    <td><%= link_to "Perego", manufacturers_url %></td>
+    <td><%= link_to "First Years", manufacturers_url %></td>
+</table>
+</section>

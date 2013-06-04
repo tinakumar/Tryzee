@@ -1,0 +1,195 @@
+html {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	background: #cc3366;
+	color: #666;
+	font-family: "Verdana", "Arial";
+}
+
+body {
+	width: 1024px;
+	margin: 0px auto
+}
+
+a {color: #1c578e}
+
+a:hover {opacity: 0.8}
+
+p, li {line-height: 20px}
+
+h1, h2, h3, h4, p {
+	margin: 0;  
+	padding: 0; 
+}
+
+h1 {
+	color: white;
+	-webkit-text-stroke: 2px gray;
+	font-size: 45px;
+	letter-spacing: 2px;
+	padding-top: 20px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 20px;
+	text-align: center;
+	font-weight:normal;
+}
+
+
+.field {
+	padding: 5px;
+	text-align: left;
+}
+
+.action {
+	padding: px;
+	text-align: center;
+}
+
+header img {
+	margin-top: 30px;
+}
+
+.or_sign_up {
+	float: right;
+	margin-right: 20px;
+	font-size: 12px;
+	padding-top: 3px;	
+}
+
+
+nav {
+	margin: 0 0 0 125px;
+	clear: both;
+	background-color: white;
+	padding: 10px 20px;
+	height: 300px;
+	font-family: "Lucida Grande", sans-serif;
+	border: 2px solid #eee;
+	-webkit-border-radius: 70px;
+	-moz-border-radius: 70px;
+	border-radius: 70px;
+	-webkit-box-shadow: 0 0 25px #888;
+	-moz-box-shadow: 0 0 25px #888;
+	-ms-box-shadow: 0 0 25px #888;
+	box-shadow: 0 0 25px #888;
+}
+
+nav {
+	position: absolute;
+	left: 0;
+	margin: 0;
+	width: 165px
+}
+
+nav li a:first-child {
+	color: #b5565a; 
+	display: block;
+	text-decoration: none;
+	}
+
+footer p {color: #eee; padding: 10px 124px}
+
+#login_top {
+	background-color: white;
+	width: 350px;
+	float: right;
+	padding: 20px;
+}
+
+section#main {
+	background-color: #B0E0E6;
+	clear: both;
+	padding: 10px 20px;
+	border: 2px solid #eee;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	-webkit-box-shadow: 0 0 25px #888;
+	-moz-box-shadow: 0 0 25px #888;
+	-ms-box-shadow: 0 0 25px #888;
+	box-shadow: 0 0 25px #888;
+			background-color: #B0E0E6;
+			background-image: -webkit-gradient(linear, 0 0, 100% 100%,
+									color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent),
+									color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)),
+									color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent),
+			 						to(transparent));
+			background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+								transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+								transparent 75%, transparent);
+			background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+								transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+								transparent 75%, transparent);
+			background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+								transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+								transparent 75%, transparent);
+			background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+								transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+								transparent 75%, transparent);
+			background-image: linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+								transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+								transparent 75%, transparent);
+		}
+
+
+.stroller {
+	float: left;
+	margin: 40px 70px;
+	background-color: white;
+	padding: 10px 20px;
+	font-family: "Lucida Grande", sans-serif;
+	border: 10px solid #eee;
+	-webkit-border-radius: 70px;
+	-moz-border-radius: 70px;
+	border-radius: 70px;
+	-webkit-box-shadow: 0 0 25px #888;
+	-moz-box-shadow: 0 0 25px #888;
+	-ms-box-shadow: 0 0 25px #888;
+	box-shadow: 0 0 25px #888;
+}
+
+.white_rounded {
+	float: left;
+	padding: 40px;
+	margin-top: 40px;
+	margin-left: 50px;
+	background-color: white;
+	border: 10px solid #eee;
+	-webkit-border-radius: 70px;
+	-moz-border-radius: 70px;
+	border-radius: 70px;
+	-webkit-box-shadow: 0 0 25px #888;
+	-moz-box-shadow: 0 0 25px #888;
+	-ms-box-shadow: 0 0 25px #888;
+	box-shadow: 0 0 25px #888;
+}
+
+.sign_up_form {
+	margin: 40px auto;
+	width: 300px;
+}
+
+#search_box p {
+	font-size: 18px;
+}
+
+
+#video {
+	display: block;
+	margin: 0 auto;
+	width: 550px;
+	padding: 40px;
+}
+
+
+footer {
+	margin-top: 30px;
+	height: 50px;
+	background-color: #333;
+}
+
+
